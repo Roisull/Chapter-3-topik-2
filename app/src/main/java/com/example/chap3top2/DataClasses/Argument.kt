@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 
 data class Argument(val argumentSatu: String?, val argumentDua: String?): Parcelable {
-    
+
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString()
