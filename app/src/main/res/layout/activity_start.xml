@@ -23,12 +23,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/black"
         android:hint="Masukkan data satu"/>
 
     <EditText
         android:id="@+id/et_input_data_dua"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:textColorHint="@color/black"
         android:textColor="@color/black"
         android:hint="Masukkan data dua"/>
 
@@ -49,5 +53,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="passing data dengan serializable"/>
+
+    <Button
+        android:id="@+id/btn_open_galeri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="buka galeri"/>
+
+    <Button
+        android:id="@+id/btn_open_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open camera"/>
+
+    <Button
+        android:id="@+id/btn_open_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Open web"/>
+
+    <Button
+        android:id="@+id/btn_parcelable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="parcelable"/>
 
 </LinearLayout>

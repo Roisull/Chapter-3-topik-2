@@ -3,6 +3,7 @@ package com.example.chap3top2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import com.example.chap3top2.DataClasses.Argument
 import com.example.chap3top2.DataClasses.Person
 import org.w3c.dom.Text
 
@@ -18,6 +19,16 @@ class EndActivity : AppCompatActivity() {
         tvGetData1 = findViewById(R.id.tv_get_data_satu)
         tvGetData2 = findViewById(R.id.tv_get_data_dua)
 
+
+        // menerima data dari tombol parcelable
+        val dataArgument = intent.getParcelableExtra("dataArgument") as Argument?
+
+        tvGetData1.text = dataArgument!!.argumentSatu
+        tvGetData2.text = dataArgument!!.argumentDua
+
+    }
+
+    fun intentDanBundle(){
         if (intent.extras != null){ /* menerima data dari tombol bundle */
 
             val bundle = intent.extras
@@ -30,12 +41,13 @@ class EndActivity : AppCompatActivity() {
             tvGetData2.setText(intent.getStringExtra("data2"))
 
         }
+    }
 
+    fun intentSerializable(){
         // menerima data dari tombol serializable
         val person = intent.getSerializableExtra("AN_OBJECT") as Person
 
-        tvGetData1.text = person.name
-        tvGetData2.text = person.email
-
+        tvGetData1.setText(person.name.trim())
+        tvGetData2.setText(person.email.trim())
     }
 }
