@@ -18,13 +18,13 @@ class EndActivity : AppCompatActivity() {
         tvGetData1 = findViewById(R.id.tv_get_data_satu)
         tvGetData2 = findViewById(R.id.tv_get_data_dua)
 
-        if (intent.extras != null){ // menerima data dari tombol bundle
+        if (intent.extras != null){ /* menerima data dari tombol bundle */
 
             val bundle = intent.extras
             tvGetData1.setText(bundle?.getString("data1"))
             tvGetData2.setText(bundle?.getString("data2"))
 
-        }else{ // menerima data dari tombol intent
+        }else{ /* menerima data dari tombol intent */
 
             tvGetData1.setText(intent.getStringExtra("data1"))
             tvGetData2.setText(intent.getStringExtra("data2"))
